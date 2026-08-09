@@ -1,3 +1,22 @@
+<!-- ========================================== -->
+<!-- HEADER BANNER & TECH STACK BADGES          -->
+<!-- ========================================== -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0078D4&height=220&section=header&text=Microsoft%20Fabric%20Local%20Simulation&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=38&subtext=Medallion%20Architecture%20%E2%80%A2%20Delta%20Lake%20%E2%80%A2%20Direct%20Lake%20%E2%80%A2%20MLflow&subtextSize=16&subtextAlignY=62" width="100%" alt="Microsoft Fabric Banner" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/your-username/microsoft-fabric-local-simulation">
+    <img src="https://img.shields.io/badge/Microsoft_Fabric-Local_Simulation-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft Fabric">
+  </a>
+  <img src="https://img.shields.io/badge/Delta_Lake-00A4EF?style=for-the-badge&logo=delta&logoColor=white" alt="Delta Lake">
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white" alt="MLflow">
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+</p>
+
+<br />
+
 # 🏛️ Enterprise Microsoft Fabric Local Simulation
 
 An end-to-end local simulation of the **Microsoft Fabric Unified Analytics Ecosystem** built with Python and open-source Delta standards (`delta-rs`, `pandas`, `pyarrow`, `scikit-learn`, `mlflow`). 
