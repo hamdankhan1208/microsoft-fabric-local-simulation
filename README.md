@@ -365,7 +365,7 @@ source fabric_env/bin/activate
 ## 3. Install Dependencies
 
 ```bash
-pip install pandas deltalake pyarrow duckdb scikit-learn mlflow
+pip install -r requirements.txt
 ```
 
 ---
