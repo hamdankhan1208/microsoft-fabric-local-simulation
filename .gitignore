@@ -1,0 +1,11 @@
+# Ignore virtual environments
+fabric_env/
+venv/
+.venv/
+
+# Ignore Python cache & temporary files
+__pycache__/
+*.pyc
+
+# Ignore local MLflow experiment run binaries (optional)
+mlruns/

@@ -1,0 +1,46 @@
+name: Fabric Local Simulation CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 1. Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: 2. Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: 3. Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas deltalake pyarrow scikit-learn mlflow duckdb
+
+    - name: 4. Execute Bronze Layer Ingestion (01)
+      run: python 01_ingest_bronze.py
+
+    - name: 5. Execute Append & Time Travel Operations (02)
+      run: python 02_append_and_timetravel.py
+
+    - name: 6. Execute Compaction & Vacuum Maintenance (03)
+      run: python 03_optimize_and_vacuum.py
+
+    - name: 7. Execute Silver Layer Cleaning & Schema Enforcement (04)
+      run: python 04_bronze_to_silver.py
+
+    - name: 8. Execute Gold Layer Kimball Star Schema Building (05)
+      run: python 05_silver_to_gold_star_schema.py
+
+    - name: 9. Execute ML Pipeline & MLflow Logging (06)
+      run: python 06_ml_pipeline_mlflow.py
+
+    - name: 10. Execute SQL Analytics Endpoint Queries via DuckDB (07)
+      run: python 07_sql_analytics_endpoint.py
