@@ -735,7 +735,7 @@ The project focuses on reproducing the **underlying architectural patterns** usi
 
 Potential extensions include:
 
-* [+] Add automated unit and data-quality tests
+* [X] Add automated unit and data-quality tests
 * [ ] Add Great Expectations or equivalent data validation
 * [ ] Add incremental Silver processing
 * [ ] Add Slowly Changing Dimensions (SCD Type 2)
