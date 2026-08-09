@@ -299,6 +299,8 @@ microsoft-fabric-local-simulation/
 ├── 05_silver_to_gold_star_schema.py
 ├── 06_ml_pipeline_mlflow.py
 ├── 07_sql_analytics_endpoint.py
+├── tests/
+│   └── test_pipeline.py
 │
 ├── .gitignore
 └── README.md
@@ -610,9 +612,9 @@ The repository includes a GitHub Actions workflow:
     └── pipeline.yml
 ```
 
-The CI/CD pipeline is intended to automatically validate the project and execute the data pipeline in a clean environment.
+The CI/CD pipeline is intended to automatically validate the project and execute the data pipeline in a clean environment. GitHub Actions runs the complete seven-stage pipeline and then executes the automated test suite.
 
-This helps demonstrate concepts such as:
+This helps demonstrate:
 
 * Automated testing
 * Regression detection
@@ -620,6 +622,33 @@ This helps demonstrate concepts such as:
 * Dependency installation
 * Pipeline validation
 * Continuous integration
+* Bronze/Silver/Gold outputs
+* Gold table presence
+* fact_sales contains data
+* unique transaction IDs
+* positive sales amounts
+* required fields are not null
+
+---
+
+## ✅ Validation
+
+The project includes a lightweight automated test suite using `pytest`.
+
+The tests verify that:
+
+- Bronze and Silver Delta tables are created
+- All Gold tables are present
+- `fact_sales` contains data
+- Transaction IDs are unique
+- Sales amounts are positive
+- Required fields contain no null values
+
+Run locally with:
+
+```bash
+pytest
+```
 
 ---
 
@@ -735,21 +764,10 @@ The project focuses on reproducing the **underlying architectural patterns** usi
 
 Potential extensions include:
 
-* [X] Add automated unit and data-quality tests
-* [ ] Add Great Expectations or equivalent data validation
-* [ ] Add incremental Silver processing
-* [ ] Add Slowly Changing Dimensions (SCD Type 2)
-* [ ] Add partitioning strategies
-* [ ] Add more advanced Delta Lake operations
-* [ ] Add a local Power BI-compatible analytical workflow
-* [ ] Add Apache Spark for a closer Fabric Data Engineering simulation
-* [ ] Add containerization with Docker
-* [ ] Add automated ML model registration
-* [ ] Add model serving
-* [ ] Add experiment comparison dashboards
-* [ ] Add pipeline orchestration
-* [ ] Add data lineage visualization
-* [ ] Add automated documentation generation
+- [ ] Add incremental Silver processing
+- [ ] Add Slowly Changing Dimensions (SCD Type 2)
+- [ ] Add partitioning strategies
+- [ ] Add more advanced Delta Lake operations
 
 ---
 
