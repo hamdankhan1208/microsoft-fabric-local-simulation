@@ -3,9 +3,10 @@ fabric_env/
 venv/
 .venv/
 
-# Ignore Python cache & temporary files
+# Ignore generated local Lakehouse data
+fabric_lakehouse/
+
+# Ignore Python cache & MLflow
 __pycache__/
 *.pyc
-
-# Ignore local MLflow experiment run binaries (optional)
 mlruns/
