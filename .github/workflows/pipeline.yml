@@ -44,3 +44,6 @@ jobs:
 
     - name: 10. Execute SQL Analytics Endpoint Queries via DuckDB (07)
       run: python 07_sql_analytics_endpoint.py
+
+    - name: 11. Execute pipeline tests (08)
+      run: pytest
