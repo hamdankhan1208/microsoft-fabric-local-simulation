@@ -4,3 +4,4 @@ pyarrow
 duckdb
 scikit-learn
 mlflow
+pytest
