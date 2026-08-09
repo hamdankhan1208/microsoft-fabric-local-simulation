@@ -32,7 +32,7 @@
 
 # 🏛️ Microsoft Fabric Local Simulation
 
-An end-to-end local implementation of the **Microsoft Fabric Unified Analytics ecosystem**, built entirely with Python and open-source technologies.
+An end-to-end local simulation of the **Microsoft Fabric Unified Analytics ecosystem**, built entirely with Python and open-source technologies.
 
 This project recreates the core architectural concepts of Microsoft Fabric on a local machine, including:
 
