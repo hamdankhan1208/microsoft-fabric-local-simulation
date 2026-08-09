@@ -1,0 +1,6 @@
+pandas
+deltalake
+pyarrow
+duckdb
+scikit-learn
+mlflow
